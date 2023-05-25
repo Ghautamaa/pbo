@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> dbd7ac72bd1a82ed5077ceb0c879b655dde0331a
->>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -112,19 +106,11 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             komik.setKodeBuku(input.next());
             input.nextLine();
-<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             komik.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             komik.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
-=======
-            System.out.println("Judul Buku : ");
-            komik.setJudul(input.nextLine());
-            System.out.println("Nama Pengarang : ");
-            komik.setNamaPengarang(input.nextLine());
-            System.out.println("Jumlah Halaman : ");
->>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             komik.setJumlahHalaman(input.nextInt());
 
             listBuku.add(komik);
@@ -136,19 +122,11 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             majalah.setKodeBuku(input.next());
             input.nextLine();
-<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             majalah.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             majalah.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
-=======
-            System.out.println("Judul Buku : ");
-            majalah.setJudul(input.nextLine());
-            System.out.println("Nama Pengarang : ");
-            majalah.setNamaPengarang(input.nextLine());
-            System.out.println("Jumlah Halaman : ");
->>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             majalah.setJumlahHalaman(input.nextInt());
 
             listBuku.add(majalah);
@@ -160,19 +138,11 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             textbook.setKodeBuku(input.next());
             input.nextLine();
-<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             textbook.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             textbook.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
-=======
-            System.out.println("Judul Buku : ");
-            textbook.setJudul(input.nextLine());
-            System.out.println("Nama Pengarang : ");
-            textbook.setNamaPengarang(input.nextLine());
-            System.out.println("Jumlah Halaman : ");
->>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             textbook.setJumlahHalaman(input.nextInt());
             listBuku.add(textbook);
         }
