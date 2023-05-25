@@ -1,4 +1,3 @@
-package pbo;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -64,7 +63,7 @@ public class Main {
         do {
             tampilData(listBuku);
             System.out.println("=================================");
-            System.out.println("Pilih buku yang ingin di beli");
+            System.out.print("Pilih buku yang ingin di beli : ");
             tanya = input.nextInt();
             if ((tanya < 0) || (tanya >= listBuku.size())) {
                 System.out.println("Buku tidak ditemukan");
@@ -76,7 +75,7 @@ public class Main {
 
         double uang;
         do {
-            System.out.println("Masukan uang : ");
+            System.out.print("Masukan uang : ");
             uang = input.nextDouble();
             if (uang < listBuku.get(tanya).HargaBuku()) {
                 System.out.println("Uang anda kurang");
@@ -96,48 +95,56 @@ public class Main {
             System.out.println("2. Majalah");
             System.out.println("3. Textbook");
             System.out.println("=================================");
-            System.out.println("Masukan Pilihan : ");
+            System.out.print("Masukan Pilihan : ");
             tanya = input.nextInt();
         } while (tanya < 1 || tanya > 3);
         
         if (tanya == 1) {
             Komik komik = new Komik(null, null, null, 0);
-            System.out.println("Masukan data komik : ");
-            System.out.println("Kode Buku : ");
+            System.out.println("=================================");
+            System.out.println("Masukan data komik  ");
+            System.out.println("=================================");
+            System.out.print("Masukan Kode Buku : ");
             komik.setKodeBuku(input.next());
-            System.out.println("Judul Buku : ");
-            komik.setJudul(input.next());
-            System.out.println("Nama Pengarang : ");
-            komik.setNamaPengarang(input.next());
-            System.out.println("Jumlah Halaman : ");
+            input.nextLine();
+            System.out.print("Judul Buku : ");
+            komik.setJudul(input.nextLine());
+            System.out.print("Nama Pengarang : ");
+            komik.setNamaPengarang(input.nextLine());
+            System.out.print("Jumlah Halaman : ");
             komik.setJumlahHalaman(input.nextInt());
 
             listBuku.add(komik);
         } else if (tanya == 2) {
             Majalah majalah = new Majalah(null, null, null, 0);
-            System.out.println("Masukan data majalah : ");
-            System.out.println("Kode Buku : ");
+            System.out.println("=================================");
+            System.out.println("Masukan data majalah  ");
+            System.out.println("=================================");
+            System.out.print("Masukan Kode Buku : ");
             majalah.setKodeBuku(input.next());
-            System.out.println("Judul Buku : ");
-            majalah.setJudul(input.next());
-            System.out.println("Nama Pengarang : ");
-            majalah.setNamaPengarang(input.next());
-            System.out.println("Jumlah Halaman : ");
+            input.nextLine();
+            System.out.print("Judul Buku : ");
+            majalah.setJudul(input.nextLine());
+            System.out.print("Nama Pengarang : ");
+            majalah.setNamaPengarang(input.nextLine());
+            System.out.print("Jumlah Halaman : ");
             majalah.setJumlahHalaman(input.nextInt());
 
             listBuku.add(majalah);
         } else {
             TextBook textbook = new TextBook(null, null, null, 0);
-            System.out.println("Masukan data textbook : ");
-            System.out.println("Kode Buku : ");
+            System.out.println("=================================");
+            System.out.println("Masukan data textbook ");
+            System.out.println("=================================");
+            System.out.print("Masukan Kode Buku : ");
             textbook.setKodeBuku(input.next());
-            System.out.println("Judul Buku : ");
-            textbook.setJudul(input.next());
-            System.out.println("Nama Pengarang : ");
-            textbook.setNamaPengarang(input.next());
-            System.out.println("Jumlah Halaman : ");
+            input.nextLine();
+            System.out.print("Judul Buku : ");
+            textbook.setJudul(input.nextLine());
+            System.out.print("Nama Pengarang : ");
+            textbook.setNamaPengarang(input.nextLine());
+            System.out.print("Jumlah Halaman : ");
             textbook.setJumlahHalaman(input.nextInt());
-
             listBuku.add(textbook);
         }
         
@@ -146,7 +153,7 @@ public class Main {
     public static void hapusData(ArrayList<Buku> listBuku) {
         tampilData(listBuku);
         System.out.println("=================================");
-        System.out.println("Pilih buku yang akan dihapus : ");
+        System.out.print("Pilih buku yang akan dihapus : ");
         tanya = input.nextInt();
 
         listBuku.remove(tanya);
