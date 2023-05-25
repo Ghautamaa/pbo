@@ -1,10 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> dbd7ac72bd1a82ed5077ceb0c879b655dde0331a
+>>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
     static int tanya;
     static Scanner input = new Scanner(System.in);
-    
 
     public static void main(String[] args) {
         TextBook textBook1 = new TextBook("01", "Cara menjadi Yoga", "Yoga", 100);
@@ -15,7 +21,7 @@ public class Main {
         listBuku.add(textBook1);
         listBuku.add(komik1);
         listBuku.add(majalah1);
-        
+
         while (true) {
             do {
                 System.out.println("=================================");
@@ -30,36 +36,35 @@ public class Main {
                 System.out.print("Masukan Pilihan : ");
                 tanya = input.nextInt();
             } while (tanya < 1 || tanya > 5);
-            
 
             if (tanya == 1) {
                 tampilData(listBuku);
             } else if (tanya == 2) {
                 transaksi(listBuku);
             } else if (tanya == 3) {
-                tambahData(listBuku);;
+                tambahData(listBuku);
+                ;
             } else if (tanya == 4) {
                 System.out.println("Terima Kasih ");
-                hapusData(listBuku);;
+                hapusData(listBuku);
+                ;
             } else {
                 break;
             }
         }
     }
 
-
-
-    public static void tampilData (ArrayList<Buku> listBuku) {
+    public static void tampilData(ArrayList<Buku> listBuku) {
         System.out.println("=================================");
         System.out.println("            Data Buku");
         System.out.println();
-        for (int i = 0; i < listBuku.size() ; i++) {
-            System.out.print(i+". ");
+        for (int i = 0; i < listBuku.size(); i++) {
+            System.out.print(i + ". ");
             listBuku.get(i).View();
         }
     }
 
-    public static void transaksi (ArrayList<Buku> listBuku) {
+    public static void transaksi(ArrayList<Buku> listBuku) {
         do {
             tampilData(listBuku);
             System.out.println("=================================");
@@ -81,9 +86,9 @@ public class Main {
                 System.out.println("Uang anda kurang");
             }
         } while (uang < listBuku.get(tanya).HargaBuku());
-        
+
         double kembalian = uang - listBuku.get(tanya).HargaTotal();
-        System.out.println("Kembalian anda : "+kembalian+"\n");
+        System.out.println("Kembalian anda : " + kembalian + "\n");
         listBuku.remove(listBuku.get(tanya));
     }
 
@@ -98,7 +103,7 @@ public class Main {
             System.out.print("Masukan Pilihan : ");
             tanya = input.nextInt();
         } while (tanya < 1 || tanya > 3);
-        
+
         if (tanya == 1) {
             Komik komik = new Komik(null, null, null, 0);
             System.out.println("=================================");
@@ -107,11 +112,19 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             komik.setKodeBuku(input.next());
             input.nextLine();
+<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             komik.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             komik.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
+=======
+            System.out.println("Judul Buku : ");
+            komik.setJudul(input.nextLine());
+            System.out.println("Nama Pengarang : ");
+            komik.setNamaPengarang(input.nextLine());
+            System.out.println("Jumlah Halaman : ");
+>>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             komik.setJumlahHalaman(input.nextInt());
 
             listBuku.add(komik);
@@ -123,11 +136,19 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             majalah.setKodeBuku(input.next());
             input.nextLine();
+<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             majalah.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             majalah.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
+=======
+            System.out.println("Judul Buku : ");
+            majalah.setJudul(input.nextLine());
+            System.out.println("Nama Pengarang : ");
+            majalah.setNamaPengarang(input.nextLine());
+            System.out.println("Jumlah Halaman : ");
+>>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             majalah.setJumlahHalaman(input.nextInt());
 
             listBuku.add(majalah);
@@ -139,15 +160,23 @@ public class Main {
             System.out.print("Masukan Kode Buku : ");
             textbook.setKodeBuku(input.next());
             input.nextLine();
+<<<<<<< HEAD
             System.out.print("Judul Buku : ");
             textbook.setJudul(input.nextLine());
             System.out.print("Nama Pengarang : ");
             textbook.setNamaPengarang(input.nextLine());
             System.out.print("Jumlah Halaman : ");
+=======
+            System.out.println("Judul Buku : ");
+            textbook.setJudul(input.nextLine());
+            System.out.println("Nama Pengarang : ");
+            textbook.setNamaPengarang(input.nextLine());
+            System.out.println("Jumlah Halaman : ");
+>>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
             textbook.setJumlahHalaman(input.nextInt());
             listBuku.add(textbook);
         }
-        
+
     }
 
     public static void hapusData(ArrayList<Buku> listBuku) {
@@ -158,5 +187,5 @@ public class Main {
 
         listBuku.remove(tanya);
     }
-    
+
 }
