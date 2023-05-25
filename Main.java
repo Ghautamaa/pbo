@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> dbd7ac72bd1a82ed5077ceb0c879b655dde0331a
 import java.util.Scanner;
 import java.util.ArrayList;
 
