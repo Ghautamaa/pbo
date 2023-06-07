@@ -17,6 +17,7 @@ public class Main {
         listBuku.add(majalah1);
 
         while (true) {
+            ubahIndex(listBuku);
             do {
                 System.out.println("=================================");
                 System.out.println("Toko Buku Grandmedia");
@@ -44,6 +45,13 @@ public class Main {
                 System.out.println("Terima Kasih Telah Berkunjung");
                 break;
             }
+        }
+    }
+
+    public static void ubahIndex (ArrayList<Buku> listBuku) {
+        for (int index = 0; index < listBuku.size(); index++) {
+            Buku buku = listBuku.get(index);
+            buku.setKodeBuku(index);
         }
     }
 
@@ -114,8 +122,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data komik  ");
             System.out.println("=================================");
-            System.out.print("Masukan Kode Buku : ");
-            komik.setKodeBuku(input.nextInt());
+        
             input.nextLine();
             System.out.print("Judul Buku : ");
             komik.setJudul(input.nextLine());
@@ -130,8 +137,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data majalah  ");
             System.out.println("=================================");
-            System.out.print("Masukan Kode Buku : ");
-            majalah.setKodeBuku(input.nextInt());
+        
             input.nextLine();
             System.out.print("Judul Buku : ");
             majalah.setJudul(input.nextLine());
@@ -146,8 +152,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data textbook ");
             System.out.println("=================================");
-            System.out.print("Masukan Kode Buku : ");
-            textbook.setKodeBuku(input.nextInt());
+        
             input.nextLine();
             System.out.print("Judul Buku : ");
             textbook.setJudul(input.nextLine());
