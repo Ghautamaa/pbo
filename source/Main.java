@@ -1,3 +1,4 @@
+package source;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -42,6 +43,8 @@ public class Main {
                 hapusData(listBuku);
                 ;
             } else {
+                System.out.println("=================================");
+                System.out.println("Terima Kasih Telah Berkunjung");
                 break;
             }
         }
@@ -53,7 +56,7 @@ public class Main {
         System.out.println();
         for (int i = 0; i < listBuku.size(); i++) {
             System.out.print(i + ". ");
-            listBuku.get(i).View();
+            listBuku.get(i).view();
         }
     }
 
@@ -69,16 +72,16 @@ public class Main {
         } while ((tanya < 0) || (tanya >= listBuku.size()));
 
         System.out.println("Anda akan membeli :");
-        listBuku.get(tanya).View();
+        listBuku.get(tanya).view();
 
         double uang;
         do {
             System.out.print("Masukan uang : ");
             uang = input.nextDouble();
-            if (uang < listBuku.get(tanya).HargaBuku()) {
+            if (uang < listBuku.get(tanya).hargaBuku()) {
                 System.out.println("Uang anda kurang");
             }
-        } while (uang < listBuku.get(tanya).HargaBuku());
+        } while (uang < listBuku.get(tanya).hargaBuku());
 
         double kembalian = uang - listBuku.get(tanya).HargaTotal();
         System.out.println("Kembalian anda : " + kembalian + "\n");
