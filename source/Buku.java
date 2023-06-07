@@ -44,7 +44,7 @@ abstract class Buku {
         return jumlahHalaman;
     }
 
-    abstract public double HargaBuku ();
+    abstract public double hargaBuku ();
     abstract public double HargaTotal ();
-    abstract public void View ();
+    abstract public void view ();
 }
