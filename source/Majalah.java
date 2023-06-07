@@ -1,7 +1,7 @@
 package source;
 class Majalah extends Buku implements HargaDiskon {
 
-    public Majalah(String kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
+    public Majalah(int kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
         super(kodeBuku, judul, namaPengarang, jumlahHalaman);
     }
 

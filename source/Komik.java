@@ -1,6 +1,6 @@
 package source;
 class Komik extends Buku {
-    public Komik(String kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
+    public Komik(int kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
         super(kodeBuku, judul, namaPengarang, jumlahHalaman);
     }
 

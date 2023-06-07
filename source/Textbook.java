@@ -1,7 +1,7 @@
 package source;
 
 class TextBook extends Buku implements HargaDiskon {
-    public TextBook(String kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
+    public TextBook(int kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
         super(kodeBuku, judul, namaPengarang, jumlahHalaman);
     }
 

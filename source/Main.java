@@ -7,9 +7,9 @@ public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        TextBook textBook1 = new TextBook("01", "Cara menjadi Yoga", "Yoga", 100);
-        Komik komik1 = new Komik("02", "One Piece", "Eichiro Oda", 1000);
-        Majalah majalah1 = new Majalah("03", "Bobo", "Bobo", 60);
+        TextBook textBook1 = new TextBook(1, "Cara menjadi Yoga", "Yoga", 100);
+        Komik komik1 = new Komik(2, "One Piece", "Eichiro Oda", 1000);
+        Majalah majalah1 = new Majalah(3, "Bobo", "Bobo", 60);
         ArrayList<Buku> listBuku = new ArrayList<Buku>();
 
         listBuku.add(textBook1);
@@ -110,12 +110,12 @@ public class Main {
         } while (tanya < 1 || tanya > 3);
 
         if (tanya == 1) {
-            Komik komik = new Komik(null, null, null, 0);
+            Komik komik = new Komik(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data komik  ");
             System.out.println("=================================");
             System.out.print("Masukan Kode Buku : ");
-            komik.setKodeBuku(input.next());
+            komik.setKodeBuku(input.nextInt());
             input.nextLine();
             System.out.print("Judul Buku : ");
             komik.setJudul(input.nextLine());
@@ -126,12 +126,12 @@ public class Main {
 
             listBuku.add(komik);
         } else if (tanya == 2) {
-            Majalah majalah = new Majalah(null, null, null, 0);
+            Majalah majalah = new Majalah(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data majalah  ");
             System.out.println("=================================");
             System.out.print("Masukan Kode Buku : ");
-            majalah.setKodeBuku(input.next());
+            majalah.setKodeBuku(input.nextInt());
             input.nextLine();
             System.out.print("Judul Buku : ");
             majalah.setJudul(input.nextLine());
@@ -142,12 +142,12 @@ public class Main {
 
             listBuku.add(majalah);
         } else {
-            TextBook textbook = new TextBook(null, null, null, 0);
+            TextBook textbook = new TextBook(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data textbook ");
             System.out.println("=================================");
             System.out.print("Masukan Kode Buku : ");
-            textbook.setKodeBuku(input.next());
+            textbook.setKodeBuku(input.nextInt());
             input.nextLine();
             System.out.print("Judul Buku : ");
             textbook.setJudul(input.nextLine());
