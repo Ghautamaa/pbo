@@ -1,5 +1,4 @@
 package source;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 
