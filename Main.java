@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> dbd7ac72bd1a82ed5077ceb0c879b655dde0331a
->>>>>>> 086bf701e6e3b6d834a152efb2410b619e57a188
->>>>>>> 6f912fe1d266bec349ce22846e9c358b17fdf0f3
->>>>>>> 2d45afe5978f089b24971e03874203ce87079509
 import java.util.Scanner;
 import java.util.ArrayList;
 
