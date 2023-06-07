@@ -13,7 +13,6 @@ public class Main {
         Majalah majalah1 = new Majalah("03", "Bobo", "Bobo", 60);
         ArrayList<Buku> listBuku = new ArrayList<Buku>();
 
-
         listBuku.add(textBook1);
         listBuku.add(komik1);
         listBuku.add(majalah1);
@@ -45,6 +44,8 @@ public class Main {
                 hapusData(listBuku);
                 ;
             } else {
+                System.out.println("=================================");
+                System.out.println("Terima Kasih Telah Berkunjung");
                 break;
             }
         }
