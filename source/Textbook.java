@@ -1,18 +1,18 @@
+package source;
 
-class Majalah extends Buku implements HargaDiskon {
-
-    public Majalah(String kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
+class TextBook extends Buku implements HargaDiskon {
+    public TextBook(String kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {
         super(kodeBuku, judul, namaPengarang, jumlahHalaman);
     }
 
     @Override
     public double HargaBuku() {
-        return getJumlahHalaman()*75;
+        return getJumlahHalaman()*150;
     }
-
+    
     @Override
     public double Diskon() {
-        return HargaBuku()*0.1;
+        return HargaBuku()*0.2;
     }
 
     @Override
@@ -20,9 +20,10 @@ class Majalah extends Buku implements HargaDiskon {
         return HargaBuku() - Diskon();
     }
 
+
     @Override
     public void View() {
-        System.out.println("Data Majalah");
+        System.out.println("Data Textbook");
         System.out.println("Kode Buku\t: "+getKodeBuku());
         System.out.println("Judul\t\t: "+getJudul());
         System.out.println("Nama Pengarang\t: "+getNamaPengarang());

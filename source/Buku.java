@@ -1,3 +1,5 @@
+package source;
+
 abstract class Buku {
     private String kodeBuku, judul, namaPengarang;
     private int jumlahHalaman;

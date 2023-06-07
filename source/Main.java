@@ -1,3 +1,5 @@
+package source;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -10,6 +12,7 @@ public class Main {
         Komik komik1 = new Komik("02", "One Piece", "Eichiro Oda", 1000);
         Majalah majalah1 = new Majalah("03", "Bobo", "Bobo", 60);
         ArrayList<Buku> listBuku = new ArrayList<Buku>();
+
 
         listBuku.add(textBook1);
         listBuku.add(komik1);
