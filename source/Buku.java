@@ -45,6 +45,7 @@ abstract class Buku {
     }
 
     abstract public double hargaBuku ();
-    abstract public double HargaTotal ();
+    abstract public double hargaTotal ();
     abstract public void view ();
+    abstract public void viewTable();
 }

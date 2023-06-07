@@ -32,7 +32,7 @@ public class Main {
             } while (tanya < 1 || tanya > 5);
 
             if (tanya == 1) {
-                tampilData(listBuku);
+                tampilDataTabel(listBuku);
             } else if (tanya == 2) {
                 transaksi(listBuku);
             } else if (tanya == 3) {
@@ -60,6 +60,17 @@ public class Main {
         }
     }
 
+    public static void tampilDataTabel (ArrayList<Buku> listBuku) {
+        System.out.println();
+        System.out.println("============================================================================================================================");
+        System.out.printf("|%-5s|%-10s|%-20s|%-20s|%-15s|%-15s|%-15s|%-15s|\n", "Kode", "Jenis", "Judul", "Pengarang", "Halaman", "Harga Buku", "Diskon" , "Harga Total");
+        System.out.println("============================================================================================================================");
+        for (int i = 0; i < listBuku.size() ; i++) {
+            listBuku.get(i).viewTable();
+        }
+        System.out.println("============================================================================================================================");
+    }
+
     public static void transaksi(ArrayList<Buku> listBuku) {
         do {
             tampilData(listBuku);
@@ -83,7 +94,7 @@ public class Main {
             }
         } while (uang < listBuku.get(tanya).hargaBuku());
 
-        double kembalian = uang - listBuku.get(tanya).HargaTotal();
+        double kembalian = uang - listBuku.get(tanya).hargaTotal();
         System.out.println("Kembalian anda : " + kembalian + "\n");
         listBuku.remove(listBuku.get(tanya));
     }

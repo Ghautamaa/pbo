@@ -10,7 +10,7 @@ class Komik extends Buku {
     }
     
     @Override
-    public double HargaTotal() {
+    public double hargaTotal() {
         return hargaBuku();
     }
 
@@ -22,8 +22,13 @@ class Komik extends Buku {
         System.out.println("Nama Pengarang\t: "+getNamaPengarang());
         System.out.println("Jumlah Halaman\t: "+getJumlahHalaman());
         System.out.println("Harga Buku\t: "+hargaBuku());
-        System.out.println("Harga Total\t: "+HargaTotal());
+        System.out.println("Harga Total\t: "+hargaTotal());
         System.out.println();
+    }
+
+    @Override
+    public void viewTable() {
+        System.out.printf("|%-5s|%-10s|%-20s|%-20s|%-15d|%-15.2f|%-15.2f|%-15.2f|\n", getKodeBuku(), "Komik", getJudul(), getNamaPengarang(), getJumlahHalaman(), hargaBuku(), 0.0 , hargaTotal());
     }
 
 
