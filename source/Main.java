@@ -38,11 +38,8 @@ public class Main {
                 transaksi(listBuku);
             } else if (tanya == 3) {
                 tambahData(listBuku);
-                ;
             } else if (tanya == 4) {
-                System.out.println("Terima Kasih ");
                 hapusData(listBuku);
-                ;
             } else {
                 System.out.println("=================================");
                 System.out.println("Terima Kasih Telah Berkunjung");
@@ -73,8 +70,8 @@ public class Main {
     }
 
     public static void transaksi(ArrayList<Buku> listBuku) {
+        tampilDataTabel(listBuku);
         do {
-            tampilData(listBuku);
             System.out.println("=================================");
             System.out.print("Pilih buku yang ingin di beli : ");
             tanya = input.nextInt();
@@ -84,6 +81,7 @@ public class Main {
         } while ((tanya < 0) || (tanya >= listBuku.size()));
 
         System.out.println("Anda akan membeli :");
+        System.out.println();
         listBuku.get(tanya).view();
 
         double uang;
@@ -164,12 +162,18 @@ public class Main {
     }
 
     public static void hapusData(ArrayList<Buku> listBuku) {
-        tampilData(listBuku);
-        System.out.println("=================================");
-        System.out.print("Pilih buku yang akan dihapus : ");
-        tanya = input.nextInt();
+        tampilDataTabel(listBuku);
+        do {
+            System.out.println("=================================");
+            System.out.print("Pilih buku yang akan dihapus : ");
+            tanya = input.nextInt();
+            if ((tanya < 0) || (tanya >= listBuku.size())) {
+                System.out.println("Buku tidak ditemukan");
+            }
+        } while ((tanya < 0) || (tanya >= listBuku.size()));
 
         listBuku.remove(tanya);
+        
     }
 
 }
