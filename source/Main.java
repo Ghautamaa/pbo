@@ -175,9 +175,8 @@ public class Main {
                 System.out.println("Buku tidak ditemukan");
             }
         } while ((tanya < 0) || (tanya >= listBuku.size()));
-
-        listBuku.remove(tanya);
         
+        listBuku.remove(tanya);
     }
 
 }
