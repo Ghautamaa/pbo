@@ -1,4 +1,5 @@
 package source;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -24,8 +25,8 @@ public class Main {
                 System.out.println("=================================");
                 System.out.println("1. Data Buku");
                 System.out.println("2. Transaksi");
-                System.out.println("3. Tambah Data");
-                System.out.println("4. Hapus Data");
+                System.out.println("3. Tambah Buku");
+                System.out.println("4. Hapus Buku");
                 System.out.println("5. Keluar");
                 System.out.println("=================================");
                 System.out.print("Masukan Pilihan : ");
@@ -48,7 +49,7 @@ public class Main {
         }
     }
 
-    public static void ubahIndex (ArrayList<Buku> listBuku) {
+    public static void ubahIndex(ArrayList<Buku> listBuku) {
         for (int index = 0; index < listBuku.size(); index++) {
             Buku buku = listBuku.get(index);
             buku.setKodeBuku(index);
@@ -65,15 +66,19 @@ public class Main {
         }
     }
 
-    public static void tampilDataTabel (ArrayList<Buku> listBuku) {
+    public static void tampilDataTabel(ArrayList<Buku> listBuku) {
         System.out.println();
-        System.out.println("============================================================================================================================");
-        System.out.printf("|%-5s|%-10s|%-20s|%-20s|%-15s|%-15s|%-15s|%-15s|\n", "Kode", "Jenis", "Judul", "Pengarang", "Halaman", "Harga Buku", "Diskon" , "Harga Total");
-        System.out.println("============================================================================================================================");
-        for (int i = 0; i < listBuku.size() ; i++) {
+        System.out.println(
+                "============================================================================================================================");
+        System.out.printf("|%-5s|%-10s|%-20s|%-20s|%-15s|%-15s|%-15s|%-15s|\n", "Kode", "Jenis", "Judul", "Pengarang",
+                "Halaman", "Harga Buku", "Diskon", "Harga Total");
+        System.out.println(
+                "============================================================================================================================");
+        for (int i = 0; i < listBuku.size(); i++) {
             listBuku.get(i).viewTable();
         }
-        System.out.println("============================================================================================================================");
+        System.out.println(
+                "============================================================================================================================");
     }
 
     public static void transaksi(ArrayList<Buku> listBuku) {
@@ -122,7 +127,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data komik  ");
             System.out.println("=================================");
-        
+
             input.nextLine();
             System.out.print("Judul Buku : ");
             komik.setJudul(input.nextLine());
@@ -137,7 +142,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data majalah  ");
             System.out.println("=================================");
-        
+
             input.nextLine();
             System.out.print("Judul Buku : ");
             majalah.setJudul(input.nextLine());
@@ -152,7 +157,7 @@ public class Main {
             System.out.println("=================================");
             System.out.println("Masukan data textbook ");
             System.out.println("=================================");
-        
+
             input.nextLine();
             System.out.print("Judul Buku : ");
             textbook.setJudul(input.nextLine());
@@ -175,7 +180,7 @@ public class Main {
                 System.out.println("Buku tidak ditemukan");
             }
         } while ((tanya < 0) || (tanya >= listBuku.size()));
-        
+
         listBuku.remove(tanya);
     }
 
