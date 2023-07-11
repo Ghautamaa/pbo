@@ -1,4 +1,4 @@
-package source;
+
 class Majalah extends Buku implements HargaDiskon {
 
     public Majalah(int kodeBuku, String judul, String namaPengarang, int jumlahHalaman) {

@@ -1,4 +1,4 @@
-package source;
+
 
 abstract class Buku {
     private String judul, namaPengarang;
