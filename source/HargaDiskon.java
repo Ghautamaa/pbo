@@ -1,5 +1,5 @@
 
 
 interface HargaDiskon {
-    public double Diskon ();
+    public double diskon ();
 }

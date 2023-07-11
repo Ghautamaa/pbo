@@ -16,7 +16,7 @@ class Komik extends Buku {
 
     @Override
     public void view() {
-        System.out.println("Data Komik");
+        System.out.println("Komik");
         System.out.println("Kode Buku\t: "+getKodeBuku());
         System.out.println("Judul\t\t: "+getJudul());
         System.out.println("Nama Pengarang\t: "+getNamaPengarang());

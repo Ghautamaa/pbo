@@ -9,8 +9,8 @@ class TokoBuku {
         listBuku = new ArrayList<>();
     }
 
-    public void tambahBuku(Buku buku) {
-        listBuku.add(buku);
+    public void tambahBuku(Buku b) {
+        listBuku.add(b);
     }
 
     public void ubahIndex() {
@@ -20,15 +20,15 @@ class TokoBuku {
         }
     }
 
-    public  void tampilData() {
-        System.out.println("=================================");
-        System.out.println("            Data Buku");
-        System.out.println();
-        for (int i = 0; i < listBuku.size(); i++) {
-            System.out.print(i + ". ");
-            listBuku.get(i).view();
-        }
-    }
+    // public  void tampilData() {
+    //     System.out.println("=================================");
+    //     System.out.println("            Data Buku");
+    //     System.out.println();
+    //     for (int i = 0; i < listBuku.size(); i++) {
+    //         System.out.print(i + ". ");
+    //         listBuku.get(i).view();
+    //     }
+    // }
 
     public  void tampilDataTabel() {
         System.out.println();
@@ -47,49 +47,49 @@ class TokoBuku {
 
     public  void transaksi() {
         tampilDataTabel();
-        int tanya;
+        int index;
         do {
             System.out.println("=================================");
             System.out.print("Pilih buku yang ingin di beli : ");
-            tanya = input.nextInt();
-            if ((tanya < 0) || (tanya >= listBuku.size())) {
+            index = input.nextInt();
+            if ((index < 0) || (index >= listBuku.size())) {
                 System.out.println("Buku tidak ditemukan");
             }
-        } while ((tanya < 0) || (tanya >= listBuku.size()));
+        } while ((index < 0) || (index >= listBuku.size()));
 
         System.out.println("Anda akan membeli :");
         System.out.println();
-        listBuku.get(tanya).view();
+        listBuku.get(index).view();
 
         double uang;
         do {
             System.out.print("Masukan uang : ");
             uang = input.nextDouble();
-            if (uang < listBuku.get(tanya).hargaBuku()) {
+            if (uang < listBuku.get(index).hargaBuku()) {
                 System.out.println("Uang anda kurang");
             }
-        } while (uang <+ listBuku.get(tanya).hargaBuku());
+        } while (uang <+ listBuku.get(index).hargaBuku());
 
-        double kembalian = uang - listBuku.get(tanya).hargaTotal();
+        double kembalian = uang - listBuku.get(index).hargaTotal();
         System.out.println("Kembalian anda : " + kembalian + "\n");
-        listBuku.remove(listBuku.get(tanya));
+        listBuku.remove(listBuku.get(index));
     }
 
     public  void tambahData() {
-        int tanya;
+        int index;
 
         do {
             System.out.println("=================================");
-            System.out.println("Pilih jenis buku :");
+            System.out.println("Pilih jenis buku yang ingin ditambah:");
             System.out.println("1. Komik");
             System.out.println("2. Majalah");
             System.out.println("3. Textbook");
             System.out.println("=================================");
             System.out.print("Masukan Pilihan : ");
-            tanya = input.nextInt();
-        } while (tanya < 1 || tanya > 3);
+            index = input.nextInt();
+        } while (index < 1 || index > 3);
 
-        if (tanya == 1) {
+        if (index == 1) {
             Komik komik = new Komik(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data komik  ");
@@ -104,7 +104,7 @@ class TokoBuku {
             komik.setJumlahHalaman(input.nextInt());
 
             listBuku.add(komik);
-        } else if (tanya == 2) {
+        } else if (index == 2) {
             Majalah majalah = new Majalah(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data majalah  ");
@@ -137,27 +137,28 @@ class TokoBuku {
     }
 
     public  void hapusData() {
-        int tanya;
+        int index;
 
         tampilDataTabel();
         do {
             System.out.println("=================================");
             System.out.print("Pilih buku yang akan dihapus : ");
-            tanya = input.nextInt();
-            if ((tanya < 0) || (tanya >= listBuku.size())) {
+            index = input.nextInt();
+            if ((index < 0) || (index >= listBuku.size())) {
                 System.out.println("Buku tidak ditemukan");
             }
-        } while ((tanya < 0) || (tanya >= listBuku.size()));
+        } while ((index < 0) || (index >= listBuku.size()));
 
-        listBuku.remove(tanya);
+        listBuku.remove(index);
     }
 
     public void cariBuku() {
         String cari;
         boolean found = false;
 
-        System.out.print("Masukan nama buku :");
+        System.out.print("Masukan judul buku : ");
         cari = input.next();
+        System.out.println();
 
         for (int i = 0; i < listBuku.size(); i++) {
             if (cari.equalsIgnoreCase(listBuku.get(i).getJudul())) {
