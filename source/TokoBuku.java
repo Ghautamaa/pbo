@@ -75,9 +75,8 @@ class TokoBuku {
         listBuku.remove(listBuku.get(index));
     }
 
-    public  void tambahData() {
-        int index;
-
+    public void tambahData() {
+        int tanya;
         do {
             System.out.println("=================================");
             System.out.println("Pilih jenis buku yang ingin ditambah:");
@@ -86,56 +85,38 @@ class TokoBuku {
             System.out.println("3. Textbook");
             System.out.println("=================================");
             System.out.print("Masukan Pilihan : ");
-            index = input.nextInt();
-        } while (index < 1 || index > 3);
-
-        if (index == 1) {
-            Komik komik = new Komik(0, null, null, 0);
+            tanya = input.nextInt();
+        } while (tanya < 1 || tanya > 3);
+    
+        Buku buku;
+        if (tanya == 1) {
+            buku = new Komik(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data komik  ");
             System.out.println("=================================");
-
-            input.nextLine();
-            System.out.print("Judul Buku : ");
-            komik.setJudul(input.nextLine());
-            System.out.print("Nama Pengarang : ");
-            komik.setNamaPengarang(input.nextLine());
-            System.out.print("Jumlah Halaman : ");
-            komik.setJumlahHalaman(input.nextInt());
-
-            listBuku.add(komik);
-        } else if (index == 2) {
-            Majalah majalah = new Majalah(0, null, null, 0);
+        } else if (tanya == 2) {
+            buku = new Majalah(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data majalah  ");
             System.out.println("=================================");
-
-            input.nextLine();
-            System.out.print("Judul Buku : ");
-            majalah.setJudul(input.nextLine());
-            System.out.print("Nama Pengarang : ");
-            majalah.setNamaPengarang(input.nextLine());
-            System.out.print("Jumlah Halaman : ");
-            majalah.setJumlahHalaman(input.nextInt());
-
-            listBuku.add(majalah);
         } else {
-            TextBook textbook = new TextBook(0, null, null, 0);
+            buku = new TextBook(0, null, null, 0);
             System.out.println("=================================");
             System.out.println("Masukan data textbook ");
             System.out.println("=================================");
-
-            input.nextLine();
-            System.out.print("Judul Buku : ");
-            textbook.setJudul(input.nextLine());
-            System.out.print("Nama Pengarang : ");
-            textbook.setNamaPengarang(input.nextLine());
-            System.out.print("Jumlah Halaman : ");
-            textbook.setJumlahHalaman(input.nextInt());
-            listBuku.add(textbook);
         }
+    
+        input.nextLine();
+        System.out.print("Judul Buku : ");
+        buku.setJudul(input.nextLine());
+        System.out.print("Nama Pengarang : ");
+        buku.setNamaPengarang(input.nextLine());
+        System.out.print("Jumlah Halaman : ");
+        buku.setJumlahHalaman(input.nextInt());
+    
+        listBuku.add(buku);
     }
-
+    
     public  void hapusData() {
         int index;
 
