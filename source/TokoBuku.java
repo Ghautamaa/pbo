@@ -4,7 +4,7 @@ import java.util.Scanner;
 class TokoBuku {
     private ArrayList<Buku> listBuku;
     private Scanner input = new Scanner(System.in);
-    
+
     public TokoBuku() {
         listBuku = new ArrayList<>();
     }
@@ -20,7 +20,7 @@ class TokoBuku {
         }
     }
 
-    public  void tampilData() {
+    public void tampilData() {
         System.out.println("=================================");
         System.out.println("            Data Buku");
         System.out.println();
@@ -30,7 +30,7 @@ class TokoBuku {
         }
     }
 
-    public  void tampilDataTabel() {
+    public void tampilDataTabel() {
         System.out.println();
         System.out.println(
                 "============================================================================================================================");
@@ -45,7 +45,7 @@ class TokoBuku {
                 "============================================================================================================================");
     }
 
-    public  void transaksi() {
+    public void transaksi() {
         tampilDataTabel();
         int tanya;
         do {
@@ -68,14 +68,14 @@ class TokoBuku {
             if (uang < listBuku.get(tanya).hargaBuku()) {
                 System.out.println("Uang anda kurang");
             }
-        } while (uang <+ listBuku.get(tanya).hargaBuku());
+        } while (uang < listBuku.get(tanya).hargaBuku());
 
         double kembalian = uang - listBuku.get(tanya).hargaTotal();
         System.out.println("Kembalian anda : " + kembalian + "\n");
         listBuku.remove(listBuku.get(tanya));
     }
 
-    public  void tambahData() {
+    public void tambahData() {
         int tanya;
 
         do {
@@ -136,7 +136,7 @@ class TokoBuku {
         }
     }
 
-    public  void hapusData() {
+    public void hapusData() {
         int tanya;
 
         tampilDataTabel();
@@ -159,9 +159,9 @@ class TokoBuku {
         System.out.print("Masukan nama buku :");
         cari = input.next();
 
-        for (int i = 0; i < listBuku.size(); i++) {
-            if (cari.equalsIgnoreCase(listBuku.get(i).getJudul())) {
-                listBuku.get(i).view();
+        for (int index = 0; index < listBuku.size(); index++) {
+            if (cari.equalsIgnoreCase(listBuku.get(index).getJudul())) {
+                listBuku.get(index).view();
                 found = true;
             }
         }
@@ -169,7 +169,7 @@ class TokoBuku {
         if (!found) {
             System.out.println("Buku tidak ditemukan");
         }
-        
+
     }
 
 }

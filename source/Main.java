@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -8,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         TokoBuku tokobuku = new TokoBuku();
-        
-        TextBook textBook1 = new TextBook(1, "Cara menjadi Yoga", "Yoga", 100);
-        Komik komik1 = new Komik(2, "One Piece", "Eichiro Oda", 1000);
+
+        TextBook textBook1 = new TextBook(1, "Yoga", "Yoga", 100);
+        Komik komik1 = new Komik(2, "Naruto", "Masashi Kishimoto", 1000);
         Majalah majalah1 = new Majalah(3, "Bobo", "Bobo", 60);
 
         tokobuku.tambahBuku(textBook1);
@@ -21,7 +20,7 @@ public class Main {
             tokobuku.ubahIndex();
             do {
                 System.out.println("=================================");
-                System.out.println("Toko Buku Grandmedia");
+                System.out.println("Toko Buku MondstadtMedia");
                 System.out.println("=================================");
                 System.out.println("1. Data Buku");
                 System.out.println("2. Cari Buku");
@@ -35,7 +34,7 @@ public class Main {
             } while (tanya < 1 || tanya > 6);
 
             if (tanya == 1) {
-                tokobuku.tampilDataTabel();;
+                tokobuku.tampilDataTabel();
             } else if (tanya == 2) {
                 tokobuku.cariBuku();
             } else if (tanya == 3) {
