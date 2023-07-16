@@ -20,15 +20,15 @@ class TokoBuku {
         }
     }
 
-    // public  void tampilData() {
-    //     System.out.println("=================================");
-    //     System.out.println("            Data Buku");
-    //     System.out.println();
-    //     for (int i = 0; i < listBuku.size(); i++) {
-    //         System.out.print(i + ". ");
-    //         listBuku.get(i).view();
-    //     }
-    // }
+    public  void tampilData() {
+        System.out.println("=================================");
+        System.out.println("            Data Buku");
+        System.out.println();
+        for (int i = 0; i < listBuku.size(); i++) {
+            System.out.print(i + ". ");
+            listBuku.get(i).view();
+        }
+    }
 
     public  void tampilDataTabel() {
         System.out.println();
